@@ -1,0 +1,41 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação do DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Luz Apagada.
+    </div>
+    
+    <input type="button" value="acender" onclick="acender()">
+    <input type="button" value="apagar" onclick="apagar()">
+
+    <script>
+        var area = document.getElementById("area");
+
+        function acender(){
+            area.style.backgroundColor = 'yellow'
+            area.innerHTML = 'luz acesa'
+        }
+
+        function apagar(){
+            area.style.backgroundColor = 'blue'
+            area.innerHTML = 'luz apagada'
+        }
+
+    </script>
+
+
+</body>
+</html>

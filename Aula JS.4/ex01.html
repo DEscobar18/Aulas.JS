@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body{
+            background-color: #c4c4c4;
+            color: #000;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Eventos DOM - TAGNAME</h1>
+    <p>O resultado vai ser exibido aqui.</p>
+    <p>Voce e demais cara!</p>
+    <div> Clique em Mim</div>
+
+    <script>
+
+        var corpo = document.body
+        corpo.style.backgroundColor = 'blue'
+
+        var p1 = document.getElementsByTagName('p')[0]
+        p1.style.color = 'red'
+
+        var p2 = document.getElementsByTagName('p')[1]
+        p2.style.color = 'green'
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamentos</title>
+    <style>
+        div#anuncio{
+            text-align: center;
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="anuncio">
+    <p>A campanha de lula mostrou uma otima campanha</p>
+    </div>
+
+    <input type="button" value="Proximo" onclick="Proximo()">
+
+    <script>
+        var p = document.getElementById("anuncio");
+
+        function Proximo(){
+            p.innerHTML = 'Volte sempre comprar no Brasil'
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação do DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Ascenda a luz.
+    </div>
+    
+    <script>
+
+        var a = document.getElementById("area");  
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+
+
+
+        function clicar(){      
+            a.style.backgroundColor = 'yellow';
+            a.innerHTML = 'Clicou!'
+        } 
+        
+        function entrou(){
+            a.innerHTML = 'Entrou!'
+        } 
+        
+        function saiu(){
+            a.innerHTML = 'Saiu!'
+            a.style.backgroundColor = 'blue'
+        }
+
+
+
+    </script> 
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+</head>
+<body>
+    <script>
+
+        var n1 = prompt((`Digite um numero: `));
+        var n2 = prompt((`Digite outro numero: `));
+
+        var soma = parseInt(n1) + parseInt(n2);
+
+        alert(`O resultado de sua operação foi: ${soma}`)
+        
+        var inc = 100;
+        inc = 100 - soma;
+
+        while(inc > soma){
+            soma++
+        }
+        while(inc < soma){
+            soma--
+        }    
+
+        document.write(`Quase acertou o valor de INC faltou: ${inc}`)
+
+
+    </script>    
+</body>
+</html>
