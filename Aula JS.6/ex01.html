@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição IF</title>
+
+        <style> 
+
+            h1{
+            font: arial 18pt normal;
+            text-align: center;
+            }
+
+            #pap{
+                font: arial 16pt normal;
+                text-align: center;
+            }
+
+            #res{
+                font: arial 14pt normal;
+                text-align: center;
+            }
+
+            input{
+                display: block;
+                margin: 10px auto;
+                padding: 5px;
+                font: arial 14pt normal;
+            }
+    </style>
+</head>
+<body>
+    <h1>Condição IF</h1>
+    <p id="pap">Essa é nossa primeira aula de condições!</p>
+
+    
+
+    <input type="number" name = "txtn" id="txtn" placeholder="Digite sua idade">
+    <input type="button" value="Verificar" onclick="Verificar()">
+    
+    <div id="res">    
+    </div>
+
+    <div id="global">
+        <p></p>
+        <p></p>
+    </div>
+
+    <script>
+
+        var idade = document.getElementById('txtn')
+
+        var agora = new Date()
+        var paragrafo = document.getElementById('global').getElementsByTagName('p')[0]
+        paragrafo.innerHTML = `<strong> ${agora.toLocaleDateString('pt-BR', {dateStyle: 'full'})} </strong>`
+
+
+
+        function Verificar() {
+
+            if (idade.value == "") {
+                res.innerHTML = `<p>Por favor, digite sua idade!</p>`
+
+            } else if (Number(idade.value) >= 18) {
+                res.innerHTML = `<p>Você é <strong>maior de idade!</strong></p>`
+
+            } else {
+                res.innerHTML = `<p>Você é <strong>menor de idade!</strong></p>`
+            }
+        }
+
+    </script>
+
+</body>
+</html>
