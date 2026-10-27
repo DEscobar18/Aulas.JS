@@ -17,5 +17,29 @@
     
     </select>
 
+    
+    <form>
+        <input type="text" name="Add" id="NomeProduto" placeholder="Nome do Produto">
+        <input type="number" name="qtd" id="Quantidade" placeholder="Quantidade">
+        <input type="submit" value="Cadastrar">
+    </form>
+
+<script>
+    
+    const form = document.querySelector('form');
+    const setorSelect = document.getElementById('setor');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+
+        const nomeProduto = document.getElementById('NomeProduto').value;
+        const quantidade = document.getElementById('Quantidade').value;
+        const setorSelecionado = setorSelect.value;
+
+        // Aqui você pode adicionar a lógica para processar os dados do formulário
+        console.log(`Produto: ${nomeProduto}, Quantidade: ${quantidade}, Setor: ${setorSelecionado}`);
+    });
+</script>
+
 </body>
 </html>
