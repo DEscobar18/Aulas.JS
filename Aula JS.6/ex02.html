@@ -6,39 +6,32 @@
     <title>Filters</title>
 </head>
 <body>
-    <label for="setor">Setor:</label>
 
-    <select name="setor" id="setor">
+
+    
+    <form>
+
+        <label for="setor">Setor:</label>
+
+        <select name="setor" id="setor">
         
         <option value="adm">Cozinha</option>
         <option value="com">Comercial</option>
         <option value="fin">Financeiro</option>
         <option value="tec">Tecnologia</option>
     
-    </select>
+        </select>
 
-    
-    <form>
-        <input type="text" name="Add" id="NomeProduto" placeholder="Nome do Produto">
-        <input type="number" name="qtd" id="Quantidade" placeholder="Quantidade">
+        <input type="text" name="nome" id="nomeProduto" placeholder="Nome" required>
+        <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome" required>
+        <input type="text" name="cpf" id="cpf" placeholder="CPF"  required>
+        <input type="date" name="nascimento" id="dataNascimento" placeholder="Data de Nascimento" required>
+        <input type="text" name="username" id="username" placeholder="User"required>
         <input type="submit" value="Cadastrar">
     </form>
 
 <script>
     
-    const form = document.querySelector('form');
-    const setorSelect = document.getElementById('setor');
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o envio do formulário
-
-        const nomeProduto = document.getElementById('NomeProduto').value;
-        const quantidade = document.getElementById('Quantidade').value;
-        const setorSelecionado = setorSelect.value;
-
-        // Aqui você pode adicionar a lógica para processar os dados do formulário
-        console.log(`Produto: ${nomeProduto}, Quantidade: ${quantidade}, Setor: ${setorSelecionado}`);
-    });
 </script>
 
 </body>
