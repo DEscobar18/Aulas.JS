@@ -1,47 +1,57 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Aula</title>
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Aula</title>
+    </head>
+    <body>
 
-    <header>
+        <header>
 
-    </header>
-        <h1></h1>
-    <section>
-        <div id="idade">
+        </header>
+            <h1></h1>
+        <section>
+            <div id="sexo">
 
-            <input type="date" name="data" id="idade" >
+                
+                <input type="radio" name="sexo" id="opcaoA" value="feminino">
+                <label for="opcaoA">Feminino</label>
+                <input type="radio" name="sexo" id="opcaoB" value="masculino">
+                <label for="opcaoB">Masculino</label>
+                
+                <input type="button" id="clicar" value="Verificar" onclick="verificar()">
+                <input type="button" id="resetar" value="Resetar" onclick="reset()">
+                
+                <div id="resp">       
+                </div>
 
-            <input type="radio" name="sexo" id="opcaoA" value="feminino" onchange="opcaoA()">
-            <label for="opcaoA">Feminino</label>
-            <input type="radio" name="sexo" id="opcaoB" value="masculino" onchange="opcaoB()">
-            <label for="opcaoB">Masculino</label>
+            </div>
+
+
+            <div id="tema">
+
+                <input type="radio" name="tema" id="claro" value="claro">
+                <label for="claro">Claro</label>
+
+                <input type="radio" name="tema" id="escuro" value="escuro">
+                <label for="escuro">Escuro</label>
+
+                <input type="button" id="aplicar" value="Aplicar" onclick="alterartema()">
+            </div>
+
+
             
 
-            <input type="button" id="clicar" value="Calcular">
-
-        </div>
-
-        <div id="som">
-
-        </div>
+        </section>
 
 
-        <div id="resp">       
-        </div>
-
-    </section>
-
-    <footer>
-  
-    </footer>
+        <footer>
+    
+        </footer>
 
 
-    <script src="script.js"></script>
-</body>
-</html>
+        <script src="script.js"></script>
+    </body>
+    </html>

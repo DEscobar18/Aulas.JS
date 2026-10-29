@@ -1,32 +1,43 @@
 var r = document.getElementById('resp')
-
-function opcaoA(){
-    var fem = document.getElementById('opcaoA')
-    r.innerHTML = '<p>Voce e uma menina</p>'
-    
-}
+var ver = document.getElementById('clicar')
+var opA = document.getElementById('opcaoA')
+var opB = document.getElementById('opcaoB')
 
 
-var c = document.getElementById('clicar')
 
-function soma() {
-    var campoData = document.getElementById('idade')
-    var res = document.getElementById('som')
 
-    var nascimento = new Date(campoData.value + 'T00:00:00')
-    var hoje = new Date()
-
-    var idadeCalculada = hoje.getFullYear() - nascimento.getFullYear()
-
-    if (
-        hoje.getMonth() < nascimento.getMonth() ||
-        (hoje.getMonth() === nascimento.getMonth() &&
-         hoje.getDate() < nascimento.getDate())
-    ) {
-        idadeCalculada--
+ver.addEventListener('click', Verificar)
+function Verificar(){
+    if (opA.checked){
+        r.innerHTML = 'Voce e uma menina!'
+    } else if (opB.checked){
+        r.innerHTML = 'Voce e um menino!'
+    }else {
+        alert('Error, selecione uma opcao!')
     }
-
-    res.textContent = `A sua idade é ${idadeCalculada} anos.`
 }
 
-c.addEventListener('click', soma)
+var rest = document.getElementById('resetar')
+
+rest.addEventListener('click', reset)
+function reset(){
+    r.innerHTML = ''
+    opA.checked = false
+    opB.checked = false
+}
+
+
+
+var cl = document.getElementById('claro')
+var es = document.getElementById('escuro')
+var altema = document.getElementById('aplicar')
+
+altema.addEventListener('click', alterartema)
+
+function alterartema(){
+    if(cl.checked){
+        document.body.style.backgroundColor = '#ffee00'
+    } else if (es.checked){
+        document.body.style.backgroundColor = 'black'
+    }
+}
